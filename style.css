@@ -1,0 +1,263 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;;
+}
+/* Estilos de la seccion header */
+.header {
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+}
+.container-head {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 293px));
+    grid-template-rows: 77px;
+    grid-gap: 28px;
+    justify-content: center;
+    align-items: center;
+}
+.header-logo {
+    font-size: 28px;
+    width: 100%;
+    /* text-decoration: none; */
+    font-weight: bold;
+}
+.logo {
+    text-decoration: none;
+    color: rgba(0, 0, 0, .7);
+}
+.logo span {
+    font-family: 'Pacifico', sans-serif;
+}
+.buscador {
+    display: grid;
+    justify-content: center;
+    position: relative;
+}
+.buscador input {
+    background: #fafafa;
+    border: solid 1px #dbdbdb;
+    text-align: center;
+    padding: 5px 28px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.buscador i {
+    font-size: 14px;
+    position: absolute;
+    right: 170px;
+    top: 7px;
+    margin-left: 15px;
+    color: rgba(0, 0, 0, .2);
+}
+.navigator {
+    display: grid;
+    justify-content: end;
+}
+
+.navigator ul li {
+    padding: 0 12px;
+    display: inline-block;
+}
+.navigator ul li a {
+    list-style: none;
+    font-size: 24px;
+    color: #262626;
+}
+
+/* Estilos para el perfil de usuario */
+.user {
+    margin-top: 78px;
+}
+.user-container {
+    display: grid;
+    grid-template-columns: minmax(100px, 321px) minmax(200px, 614px);
+    grid-template-rows: minmax(100px, 270px);
+    justify-content: center;
+}
+.user-perfil {
+    color: #262626;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+.user-perfil-image {
+    padding: 40px;
+}
+.user-perfil-image img {
+    width: 100%;
+    border-radius: 50%;
+}
+.user-details {
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+.user-details {
+    /* border-bottom: 1px solid rgba(0, 0, 0, .2); */
+    display: grid;
+    grid-template-rows: repeat(3, 51.5px);
+    align-content: center;
+}
+.user-nick {
+    font-size: 26px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    align-self: center;
+}
+.user-nick input {
+    background: transparent;
+    border: solid 1px #dbdbdb;
+    text-align: center;
+    border-radius: 3px;
+    padding: 5px 9px;
+    cursor: pointer;
+    color: var(--f07, #262626);
+    font-weight: bold;
+    margin: 0 15px;
+}
+.fa-cog {
+    cursor: pointer;
+}
+.user-info {
+    font-size: 16px;
+    align-self: center;
+}
+.user-info ul {
+    padding: 0;
+    margin: 0;
+    display: inline;
+}
+.user-info ul li {
+    /* padding: 0 12px; */
+    display: inline-block;
+    margin-right: 40px;
+}
+.user-info ul li span {
+    list-style: none;
+}
+.user-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.user-name p.profile-description{
+    margin: 6px 0;
+    line-height: 1.5;
+    
+}
+
+/* Estilos del profile */
+.profiles {
+    display: grid;
+    grid-template-columns: minmax(100px, 935px);
+    grid-template-rows: 50px;
+    justify-content: center;
+}
+.profiles-list {
+    text-align: center;
+    align-self: center;
+}
+.profiles-list ul {
+    padding: 0;
+    margin: 0;
+    display: inline;
+}
+.profiles-list ul li {
+    display: inline-block;
+    margin-right: 60px;
+}
+.profiles-list ul li a {
+    text-decoration: none;
+    color: #999;
+    font-size: 12px;
+}
+.profiles-list ul li a i {
+    margin-right: 4px;
+}
+
+
+
+.post-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px,293px));
+    justify-content: center;
+    grid-gap: 28px;
+}
+.post {
+    cursor: pointer;
+    position: relative;
+    /* width: 200px; */
+    display: block;
+}
+.post-image {
+    margin: 0;
+}
+.post-image img {
+    width: 100%;
+    vertical-align: top;
+}
+.post-overlay {
+    background: rgba(0, 0, 0, .4);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+/* .post-overlay {
+    background: rgba(0,0,0, .4);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    text-align: center;
+} */
+.post:hover .post-overlay{
+    display: flex;
+}
+.post-likes, .post-comments {
+    width: 80px;
+    margin: 5px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+}
+@media screen and (max-width: 768px){
+    .post-list{
+        grid-gap: 3px;
+    }
+}
+
+
+/* Estilo para las historias */
+
+section.stories-section {
+    margin-bottom: 50px;
+}
+ul.stories-list {
+    width: fit-content;
+    margin: auto;
+    min-width: 1024px;
+}
+li.storie {
+    list-style: none;
+    display: inline-grid;
+    margin: 0 auto;
+    text-align: center;
+    width: 130px;
+    height: 130px;
+}
+figure.storie-image img {
+    border-radius: 50%;
+    width: 77px;
+}  
